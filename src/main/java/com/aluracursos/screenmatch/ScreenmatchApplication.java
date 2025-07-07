@@ -17,25 +17,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication
-public class ScreenmatchApplication implements CommandLineRunner {
-@Autowired
-private ISerieRepository repository;
-	public static void main(String[] args) {
-		SpringApplication.run(ScreenmatchApplication.class, args);
-	}
+public class ScreenmatchApplication  {
 
-	@Override
-	public void run(String... args) throws Exception {
-		/*var consumoAPI = new ConsumoAPI();
-		System.out.println(json);
-		ConvertirDatos conversor = new ConvertirDatos();
-		var datos = conversor.obtenerDatos(json, DatosSerie.class);
-		System.out.println(datos);
-		json = consumoAPI.obtenerDatos("http://www.omdbapi.com/?t=game+of+thrones&Episode=1&Season=1&apikey=173f0db0");
-		DatosEpisodio episodios = conversor.obtenerDatos(json, DatosEpisodio.class);
-		System.out.println(episodios);*/
-		Principal principal = new Principal(repository);
-		principal.mostrarMenu();
+	public static void main(String[] args){
+		SpringApplication.run(ScreenmatchApplication.class,args);
 
 	}
 }
