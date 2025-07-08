@@ -1,4 +1,7 @@
 package com.aluracursos.screenmatch.dto;
 
-public record SerieDTO() {
+import com.aluracursos.screenmatch.model.Categoria;
+
+public record SerieDTO(String titulo, Integer totalDeTemporadas, Double  evaluacion, String poster, Categoria genero, String actores,
+                       String sinopsis) {
 }
